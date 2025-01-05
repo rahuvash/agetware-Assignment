@@ -28,7 +28,7 @@ const Header = () => {
           to="/cart"
           className="relative text-lg font-medium hover:text-blue-300 transition"
         >
-          {user === "user" && <FaShoppingCart size={20} />}
+          <FaShoppingCart size={20}/>
           {cartItemCount > 0 && (
             <span className="absolute -top-2 -right-4 bg-red-500 text-white text-xs rounded-full px-2 py-0.5">
               {cartItemCount}
