@@ -37,9 +37,9 @@ const ProductDetailsPage = () => {
           <h1 className="text-3xl font-bold text-center">{product.title}</h1>
           
           {/* Image with hover effect */}
-          <div className="w-72 h-72 overflow-hidden rounded-md">
+          <div className="w-72 h-64 overflow-hidden rounded-md">
             <img
-             loading="lazy"
+              loading="lazy"
               src={product.image}
               alt={product.title}
               className="w-full h-full object-contain transition-transform transform hover:scale-105"
@@ -48,6 +48,12 @@ const ProductDetailsPage = () => {
           
           <p className="text-center text-gray-600 mt-4">{product.description}</p>
           <p className="font-semibold text-xl mt-2">Price: ${product.price}</p>
+
+          {/* Rating */}
+          <div className="flex items-center mt-1">
+            <span className="text-yellow-500 font-bold">{product.rating.rate}</span>
+            <span className="ml-2 text-gray-500">({product.rating.count} reviews)</span>
+          </div>
 
           {/* Add to Cart Button */}
           <button
