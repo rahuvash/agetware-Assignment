@@ -6,6 +6,7 @@ import {
   updateProduct,
   deleteProduct,
 } from "../store/productSlice";
+import Spinner from "../components/Spinner";
 
 const AdminDashboard = () => {
   const dispatch = useDispatch();
@@ -69,7 +70,7 @@ const AdminDashboard = () => {
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
   if (isLoading) {
-    return <div className="flex items-center justify-center text-center mt-10">Loading...</div>;
+    <Spinner/>
   }
 
   return (
