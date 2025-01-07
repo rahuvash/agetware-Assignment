@@ -69,7 +69,7 @@ const AdminDashboard = () => {
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
 
   if (isLoading) {
-    return <div className="text-center mt-10">Loading...</div>;
+    return <div className="flex items-center justify-center text-center mt-10">Loading...</div>;
   }
 
   return (
